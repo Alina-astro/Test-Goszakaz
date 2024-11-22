@@ -1,0 +1,181 @@
+@font-face {
+  font-family: "Font-main";
+  src: url(../fonts/futura-pt/FuturaCyrillicBook.ttf);
+}
+
+$color-dark: rgba(47, 34, 34, 1);
+$color-light: rgba(47, 34, 34, 0.4);
+$color-white: rgba(255, 255, 255);
+$color-blue: rgba(93, 113, 221, 1);
+$color-bg-btn-next: rgba(93, 113, 221, 0.05);
+$color-bg-btn-next-hover: rgba(93, 113, 221, 0.15);
+$color-bg-btn-next-active: rgba(93, 113, 221, 0.2);
+$color-bg-category-light: rgba(93, 113, 221, 0.05);
+$color-bg-category-blue: rgba(93, 113, 221, 0.05);
+$color-bg-category-img: rgba(93, 113, 221, 0.05);
+
+@mixin text($color) {
+  font-family: "Font-main";
+  font-size: 18px;
+  line-height: 23px;
+  color: $color;
+}
+
+@mixin category($color, $color-bg) {
+  font-family: "Font-main";
+  font-size: 16px;
+  line-height: 20px;
+  color: $color;
+  background-color: $color-bg;
+  padding: 10px 16px;
+  border-radius: 8px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  border: 1px solid violet;
+  max-width: 1024px;
+  min-width: 320px;
+  margin: 0 auto;
+  background-color: rgba(249, 249, 249, 1);
+  font-family: "Font-main";
+  .header {
+    width: 100%;
+    .header__container {
+      height: 70px;
+      padding: 11px 42px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: $color-white;
+      .header__logo {
+        width: 50px;
+        img {
+          width: 100%;
+        }
+      }
+      .header__nav {
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        @include text($color-dark);
+        .header__contact {
+          display: flex;
+        }
+      }
+    }
+    .header__img {
+      width: 100%;
+      height: 250px;
+      background-image: url(../images/header-bg.jpeg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+  .main {
+    padding: 40px;
+    .articles__container {
+      width: 100%;
+      margin-top: 40px;
+      display: flex;
+      gap: 40px;
+      .articles__box {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        flex-grow: 1;
+        .article {
+          padding: 40px;
+          border-radius: 20px;
+          background-color: rgb(255, 255, 255);
+          .article__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            .article__category {
+              @include category($color-blue, $color-bg-category-light);
+            }
+            .article__date {
+              color: $color-light;
+            }
+          }
+          .article__content {
+            .article__title {
+              font-size: 24px;
+              line-height: 30px;
+            }
+            .article__text {
+              font-size: 18px;
+              line-height: 24px;
+              color: $color-light;
+            }
+          }
+          .article__content_fullwidht {
+            width: 90%;
+          }
+        }
+      }
+      .article-short {
+        flex-basis: 32%;
+        max-width: 100%;
+        padding: 40px 30px;
+        border-radius: 20px;
+        background-color: $color-blue;
+      }
+    }
+
+    .pages {
+      padding: 10vh 5vw;
+      .pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        @include text($color-dark);
+        .pagination__link {
+          padding: 4px 8px;
+          border-radius: 4px;
+          text-decoration: none;
+          color: rgb(0, 0, 0);
+        }
+
+        .pagination__link:hover {
+          color: $color-blue;
+        }
+
+        .pagination__link--active {
+          text-decoration: underline;
+          color: $color-blue;
+        }
+
+        .pagination__ellipsis {
+          color: rgb(0, 0, 0);
+        }
+
+        .pagination__next {
+          width: 137px;
+          height: 43px;
+          padding: 10px 16px;
+          background-color: $color-bg-btn-next;
+          border-radius: 8px;
+          text-decoration: none;
+          color: $color-blue;
+          img {
+            height: 10px;
+          }
+          &:hover {
+            background-color: $color-bg-btn-next-hover;
+          }
+          &:active {
+            background-color: $color-bg-btn-next-active;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="shortcut icon" href="./assets/icons/logo.svg" type="image/png">
+    <link rel="stylesheet" href="./assets/styles/normalize.css">
+    <link rel="stylesheet" href="./assets/styles/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <img src="./assets/icons/logo.svg" alt="logo">
+            </div>
+            <nav class="header__nav">
+                <div class="header__nav-item">Главная</div>
+                <div class="header__nav-item">О нас</div>
+                <div class="header__nav-item">Контакты</div>
+                <div class="header__nav-item">Поиск</div>
+                <div class="header__contact">
+                    <div class="header__contact-icon">
+                        <img src="./assets/icons/phone-call 1.svg" alt="img">
+                    </div>
+                    <div class="header__contact-number">+7 (987) 887-87</div>
+                </div>
+            </nav>
+        </div>
+        <div class="header__img"></div>
+    </header>
+    <main class="main">
+        <section class="articles__container">
+            <div class="articles__box">
+                <div class="article">
+                    <div class="article__header">
+                        <div class="article__category">Категория 1</div>
+                        <div class="article__date">13 дек 2020</div>
+                    </div>
+                    <div class="article__content article__content_fullwidht">
+                        <h2 class="article__title">Управление ИТ-активами – скучная рутина или творческая задача?</h2>
+                        <p class="article__text">
+                            Размышляя об управлении ИТ-активами, я вспомнил один учебный пример. Менеджер по
+                            ИТ-мощностям в
+                            крупной компании периодически готовил толстенный отчёт руководству. В очередной раз он не
+                            принёс
+                            отчёт, решив проверить, нужен ли он вообще.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="articles__container">
+            <div class="articles__box">
+                <div class="article">
+                    <div class="article__header">
+                        <div class="article__category">Категория 1</div>
+                        <div class="article__date">13 дек 2020</div>
+                    </div>
+                    <div class="article__content">
+                        <h2 class="article__title">Управление ИТ-активами – скучная рутина или творческая задача?</h2>
+                        <p class="article__text">
+                            Размышляя об управлении ИТ-активами, я вспомнил один учебный пример. Менеджер по
+                            ИТ-мощностям в
+                            крупной компании периодически готовил толстенный отчёт руководству. В очередной раз он не
+                            принёс
+                            отчёт, решив проверить, нужен ли он вообще.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="article-short">
+                <div class="article-short__category">Категория 1</div>
+                <h2 class="article-short__title">ITAM&SAMDay – самая настоящая удача!</h2>
+                <div class="article-short__date">13 дек 2020</div>
+            </div>
+        </section>
+        <section class="articles__container">
+            <div class="article-short">
+                <div class="article-short__category">Очень длинная категория 2</div>
+                <h2 class="article-short__title">Управление ИТ-активами – скучная рутина или творческая задача?</h2>
+                <div class="article-short__date">13 дек 2020</div>
+            </div>
+            <div class="articles__box">
+                <div class="article">
+                    <div class="article__header">
+                        <div class="article__category">Категория 1</div>
+                        <div class="article__date">13 дек 2020</div>
+                    </div>
+                    <div class="article__content">
+                        <h2 class="article__title">Управление ИТ-активами – скучная рутина или творческая задача слово
+                            слово и еще длинное
+                            слово после чего ...</h2>
+                    </div>
+                </div>
+                <div class="article">
+                    <div class="article__header">
+                        <div class="article__category">Категория 1</div>
+                        <div class="article__date">13 дек 2020</div>
+                    </div>
+                    <div class="article__content">
+                        <h2 class="article__title">ITAM&SAMDay – самая настоящая удача!</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="pages">
+            <nav class="pagination">
+                <a href="#" class="pagination__link pagination__link--active">1</a>
+                <a href="#" class="pagination__link">2</a>
+                <a href="#" class="pagination__link">3</a>
+                <a href="#" class="pagination__link">4</a>
+                <span class="pagination__ellipsis">...</span>
+                <a href="#" class="pagination__link">10</a>
+                <a href="#" class="pagination__next">
+                    Следующая <img src="./assets/icons/next 1.png" alt="next">
+                </a>
+            </nav>
+        </div>
+        <aside class="aside">
+            <div class="aside__block">
+                <h2 class="aside__title">Популярные новости</h2>
+                <div class="aside__item">
+                    <div class="aside__news-title">ITAM&SAMDay – самая настоящая удача!</div>
+                    <div class="aside__news-date">13 дек 2020</div>
+                </div>
+            </div>
+            <div class="aside__subscription">
+                <h2 class="aside__title">Подписка на рассылку</h2>
+                <div class="aside__form">
+                    <input class="aside__input" type="email">
+                    <button class="aside__button">Подписаться <img src="./assets/icons/right-arrow 1.png"
+                            alt="arrow"></button>
+                </div>
+            </div>
+        </aside>
+    </main>
+    <footer class="footer">
+        <div class="footer__logo">
+            <img src="./assets/icons/logo.svg" alt="logo">
+        </div>
+        <nav class="footer__nav">
+            <div class="footer__nav-item">О нас</div>
+            <div class="footer__nav-item">Галерея</div>
+            <div class="footer__nav-item">Новости</div>
+            <div class="footer__nav-item">Контакты</div>
+        </nav>
+        <div class="footer__copyright">ООО “Организация” 2020. Все права защищены</div>
+    </footer>
+</body>
+
+</html>
